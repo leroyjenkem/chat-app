@@ -139,6 +139,7 @@ border-radius: .5rem;
 
 .messages {
   text-align: left;
+  list-style: none;
 }
 
 #message {
