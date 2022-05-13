@@ -34,10 +34,15 @@ class Chatbox extends Component {
           {this.state.chats.map((chat) => {
             const postDate = new Date(chat.date);
             return(
-              <li key={chat.id}>
-                <em>{postDate.getDate() + '/' + (postDate.getMonth() + 1)}</em>
-                <strong>{chat.user}:</strong>
-                {chat.message}
+              <li key={chat.id} className="messages">
+                {'[ ' + postDate.toLocaleString('en-US', {
+                    month: "numeric",
+                    day: "numeric",
+                    hour: "numeric",
+                    minute: "numeric",
+                }).replace(',',' @') + ' ]'}
+                <strong> {chat.user}</strong> said:
+                {' ' + chat.message}
               </li>
             );
           })}

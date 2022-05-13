@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './App.css';
 import firebase from './firebase';
 import Chatbox from './components/Chatbox';
 
@@ -45,7 +44,7 @@ class App extends Component {
               value={this.state.message}
               placeholder="Enter a message..."
               onChange={this.onChange} />
-            <button>Send</button>
+            <button id="send">Send</button>
             </form>
           </div>
         )}

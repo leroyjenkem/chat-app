@@ -33,14 +33,18 @@ class Login extends Component {
         <h1>Login to access your account</h1>
         {error && <p className="error-message">{error.message}</p>}
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="email">Your email address:</label>
+        <div classname="emailwrap">
+          <label className="email-placeholder" htmlFor="email">Your email address:</label>
             <input
               type="text"
               name="email"
               id="email"
+              className="email-input"
               value={email}
               onChange={this.handleChange}>
             </input>
+            <span className="faux-caret">&nbsp;</span>
+          </div>
           <label htmlFor="password">Enter your password:</label>
             <input
               type="password"
@@ -49,6 +53,7 @@ class Login extends Component {
               value={password}
               onChange={this.handleChange}>
             </input>
+            <span>&nbsp;</span>
           <button className="submit">Login</button>
           <p>Don't have an account? <Link className="login-btn" to="/register"><strong>Register</strong> here</Link></p>
         </form>
