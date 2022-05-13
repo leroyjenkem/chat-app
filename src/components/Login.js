@@ -30,11 +30,10 @@ class Login extends Component {
     const {email, password, error} = this.state;
     return (
       <div className="auth-container">
-        <h1>Login</h1>
         <h1>Login to access your account</h1>
         {error && <p className="error-message">{error.message}</p>}
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="email">Email address</label>
+          <label htmlFor="email">Your email address:</label>
             <input
               type="text"
               name="email"
@@ -42,7 +41,7 @@ class Login extends Component {
               value={email}
               onChange={this.handleChange}>
             </input>
-          <label htmlFor="password">Choose a password</label>
+          <label htmlFor="password">Enter your password:</label>
             <input
               type="password"
               name="password"
@@ -51,7 +50,7 @@ class Login extends Component {
               onChange={this.handleChange}>
             </input>
           <button className="submit">Login</button>
-          <p>Don't have an account? <Link className="login-btn" to="/register">Register here</Link></p>
+          <p>Don't have an account? <Link className="login-btn" to="/register"><strong>Register</strong> here</Link></p>
         </form>
       </div>
     );

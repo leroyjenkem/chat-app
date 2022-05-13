@@ -66,7 +66,7 @@ class Register extends Component {
               onChange={this.handleChange}>
             </input>
           <button className="submit">Get started</button>
-          <p>Already have an account? <Link className="login-btn" to="/login">Login here</Link></p>
+          <p>Already have an account? <Link className="login-btn" to="/login"><strong>Login</strong> here</Link></p>
         </form>
       </div>
     );

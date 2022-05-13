@@ -1,4 +1,5 @@
 body {
+  background: hsl(204 100% 5%);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,9 +8,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  background: radial-gradient(
+    hsl(100 100% 60%),
+    hsl(200 100% 60%)
+  ) fixed;
+  background: conic-gradient(
+    hsl(100 100% 60%),
+    hsl(200 100% 60%),
+    hsl(100 100% 60%)
+  ) fixed;
+	background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .main-nav {
@@ -19,17 +43,58 @@ code {
 }
 
 a {
-  color: #3d8fac;
   text-decoration: none;
   transition: all .25s ease;
 }
 
 a:hover {
-  color: #5d8cae;
   text-decoration: underline;
 }
 
 .main-nav a {
   display: inline-block;
   padding: 25px 25px;
+}
+
+.auth-container {
+  text-align: center;
+}
+
+.auth-container input {
+padding: 12px 20px;
+margin: auto;
+display: block;
+border: 1px solid #ccc;
+border-radius: .5rem;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.submit {
+  margin: 8px 8px;
+  border: 1px solid #ccc;
+  border-radius: .25rem;
+  cursor: pointer;
+  background: radial-gradient(
+    hsl(100 100% 60%),
+    hsl(200 100% 60%)
+  ) fixed;
+  background: conic-gradient(
+    hsl(100 100% 60%),
+    hsl(200 100% 60%),
+    hsl(100 100% 60%)
+  ) fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chatbox {
+  max-width: 70vw;
+  padding: 12px 20px;
+  margin: auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -52,7 +52,7 @@ class App extends Component {
         {!this.props.user && (
           <div className="disallow-chat">
             <p>
-              <Link to="/login">Login</Link> or <Link to="/register">Register</Link> to start chatting!
+              <Link to="/login"><strong>Login</strong></Link> or <Link to="/register"><strong>Register</strong></Link> to start chatting!
             </p>
           </div>
         )}
