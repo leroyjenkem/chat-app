@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import firebase from './firebase';
 import Chatbox from './components/Chatbox';
