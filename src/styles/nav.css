@@ -1,0 +1,14 @@
+.main-nav {
+  text-align: right;
+  margin-bottom: rfs(3rem);
+  padding: rfs(0 1.25rem);
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-nav a {
+  display: inline-block;
+  padding: rfs(1.25rem);
+}

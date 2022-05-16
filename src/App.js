@@ -31,7 +31,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="contentWrap">
         <h1>Chat App</h1>
         {this.props.user && (
           <div className="allow-chat">

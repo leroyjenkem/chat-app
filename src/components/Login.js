@@ -29,7 +29,7 @@ class Login extends Component {
   render() {
     const {email, password, error} = this.state;
     return (
-      <div className="auth-container">
+      <div className="contentWrap">
         <h1>Login to access your account</h1>
         {error && <p className="error-message">{error.message}</p>}
         <form onSubmit={this.handleSubmit}>

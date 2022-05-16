@@ -37,37 +37,39 @@ class Register extends Component {
   render() {
     const {email, username, password, error} = this.state;
     return (
-      <div className="auth-container">
-        <h1>Register your account</h1>
-        {error && <p className="error-message">{error.message}</p>}
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              name="username"
-              d="username"
-              value={username}
-              onChange={this.handleChange}>
-            </input>
-          <label htmlFor="email">Email address</label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              value={email}
-              onChange={this.handleChange}>
-            </input>
-          <label htmlFor="password">Choose a password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              value={password}
-              onChange={this.handleChange}>
-            </input>
-          <button className="submit">Get started</button>
-          <p>Already have an account? <Link className="login-btn" to="/login"><strong>Login</strong> here</Link></p>
-        </form>
+      <div className="contentWrap">
+        <div className="auth-container">
+          <h1>Register your account</h1>
+          {error && <p className="error-message">{error.message}</p>}
+          <form onSubmit={this.handleSubmit}>
+            <label htmlFor="username">Username</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                value={username}
+                onChange={this.handleChange}>
+              </input>
+            <label htmlFor="email">Email address</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                value={email}
+                onChange={this.handleChange}>
+              </input>
+            <label htmlFor="password">Choose a password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                value={password}
+                onChange={this.handleChange}>
+              </input>
+            <button className="submit">Get started</button>
+            <p>Already have an account? <Link className="login-btn" to="/login"><strong>Login</strong> here</Link></p>
+          </form>
+        </div>
       </div>
     );
   }

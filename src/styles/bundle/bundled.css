@@ -3,8 +3,6 @@
 @use 'node_modules/postcss-simple-vars';
 @use 'node_modules/rfs';
 
-@import "./nav.css";
-
 html, body {
 	height: 100%;
 }
@@ -24,10 +22,8 @@ body {
 	height: 70vh;
 	background-color: rgba(21, 24, 35, 0.7);
 	box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.3);
-	border-radius: 0.75rem;
-}
-
-.contentWrap:after {
+	border-radius: rfs(.75rem);
+	&:after {
 	  position: absolute;
 	  content: '';
 	  top: 0;
@@ -42,9 +38,8 @@ body {
 	  background: linear-gradient(90deg, #0fffc1, #7e0fff);
 	  background-size: 200% 200%;
 	  animation: animateGlow 10s ease infinite;
-	}
 
-@keyframes animateGlow {
+	  @keyframes animateGlow {
 	    0%  {
 			background-position: 0% 50%
 		}
@@ -57,6 +52,8 @@ body {
 			background-position: 0% 50%
 			}
 	  }
+	}
+}
 
 a {
   text-decoration: none;
@@ -70,30 +67,22 @@ a {
 }
 
 .auth-container input {
-padding:  0.75rem 1.25rem;
+padding:  rfs(.75rem 1.25rem);
 margin: auto;
 display: block;
 border: 1px solid #ccc;
-border-radius: 0.5rem;
+border-radius: rfs(.5rem);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
 
 .emailwrap {
   display: flex;
-	height: calc(1.425rem + 2.1vw);
-	padding: 0.3rem calc(1.545rem + 3.54vw) 0.3rem 0.3rem;
+	height: rfs(3rem);
+	padding: rfs(.3rem 4.2rem .3rem .3rem);
 	width: 400px;
 	position: relative;
 	background-color: #e4e4e4;
-}
-
-@media (min-width: 1200px){
-
-	.emailwrap{
-	height: 3rem;
-	padding: 0.3rem 4.2rem 0.3rem 0.3rem;
-	}
 }
 
 .emailwrap span {
@@ -103,12 +92,12 @@ border-radius: 0.5rem;
 }
 
 .submit {
-  margin: 0.5rem;
+  margin: rfs(.5rem);
   border: 1px solid #ccc;
   cursor: pointer;
   background-color: transparent;
-  border-radius: 0.5rem;
-  padding: 0.35rem 0.5rem;
+  border-radius: rfs(.5rem);
+  padding: rfs(.35rem .5rem);
 }
 
 .chatbox {
@@ -116,16 +105,9 @@ border-radius: 0.5rem;
   margin: auto;
   display: block;
   border: 1px solid #ccc;
-  border-radius: 0.75rem;
-  padding-top: calc(1.375rem + 1.5vw);
+  border-radius: rfs(.75rem);
+  padding-top: rfs(2.5rem);
 	background-color: rgba(29, 32, 44, 0.5)
-}
-
-@media (min-width: 1200px){
-
-	.chatbox{
-  padding-top: 2.5rem;
-	}
 }
 
 .messages {
@@ -138,19 +120,34 @@ border-radius: 0.5rem;
   width: 47.5vw;
   height: 2rem;
   border: 1px solid #ccc;
-  border-radius: 0.5rem;
+  border-radius: rfs(.5rem);
   -webkit-background-clip: border-box;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 0.5rem 0 0.75rem;
+  padding: rfs(.5rem 1rem);
+  margin: rfs(.5rem .5rem 0 .75rem);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 #send {
   border: 1px solid #ccc;
-  border-radius: 0.75rem;
-  padding: 0.35rem 0.5rem;
+  border-radius: rfs(.75rem);
+  padding: rfs(.35rem .5rem);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
+}
+
+.main-nav {
+  text-align: right;
+  margin-bottom: rfs(3rem);
+  padding: rfs(0 1.25rem);
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-nav a {
+  display: inline-block;
+  padding: rfs(1.25rem);
 }
