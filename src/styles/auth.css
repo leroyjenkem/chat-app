@@ -1,0 +1,37 @@
+.auth-container {
+  text-align: center;
+}
+
+.auth-container input {
+padding:  rfs(.75rem 1.25rem);
+margin: auto;
+display: block;
+border: 1px solid #ccc;
+border-radius: rfs(.5rem);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.emailwrap {
+  display: flex;
+	height: rfs(3rem);
+	padding: rfs(.3rem 4.2rem .3rem .3rem);
+	width: 400px;
+	position: relative;
+	background-color: #e4e4e4;
+}
+
+.emailwrap span {
+  position: absolute;
+  background-color: hsla(1, 1%, 100%, 1);
+  color: #000;
+}
+
+.submit {
+  margin: rfs(.5rem);
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: rfs(.5rem);
+  padding: rfs(.35rem .5rem);
+}

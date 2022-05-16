@@ -28,14 +28,15 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build:css": "postcss src/styles/main.css -o src/index.css",
-    "watch:css": "postcss src/styles/main.css -o src/index.css -w",
-    "start": "npm-run-all -p watch:css start-js",
+    "build:css": "postcss src/styles/bundle/bundled.css -o src/index.css",
+    "watch:css": "postcss src/styles/bundle/bundled.css -o src/index.css -w",
+    "start": "npm-run-all -p watch:css start-js gulp",
     "start-js": "react-scripts start",
     "build-js": "react-scripts build",
     "build": "npm-run-all build:css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "gulp": "gulp cssBundle"
   },
   "eslintConfig": {
     "extends": [

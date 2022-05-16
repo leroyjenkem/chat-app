@@ -3,8 +3,6 @@
 @use 'node_modules/postcss-simple-vars';
 @use 'node_modules/rfs';
 
-@import "./nav.css";
-
 html, body {
 	height: 100%;
 }
@@ -20,7 +18,7 @@ body {
 
 .contentWrap {
 	position: relative;
-	width: 60vw;
+	width: 65vw;
 	height: 70vh;
 	background-color: rgba(21, 24, 35, 0.7);
 	box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.3);
@@ -58,12 +56,53 @@ body {
 			}
 	  }
 
+.disallow-chat {
+	max-width: 57.5vw;
+	margin: auto;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 0.75rem;
+	padding-top: calc(1.375rem + 1.5vw);
+	background-color: rgba(29, 32, 44, 0.5);
+}
+
+@media (min-width: 1200px){
+
+	.disallow-chat{
+	padding-top: 2.5rem;
+	}
+}
+
 a {
   text-decoration: none;
   transition: all .25s ease;
 }
 
+h1, p {
+	text-align: center;
+}
 
+.main-nav {
+  text-align: right;
+  margin-bottom: calc(1.425rem + 2.1vw);
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 1200px){
+
+	.main-nav{
+  margin-bottom: 3rem;
+	}
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-nav a {
+  display: inline-block;
+  padding: 1.25rem;
+}
 
 .auth-container {
   text-align: center;
