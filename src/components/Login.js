@@ -29,35 +29,32 @@ class Login extends Component {
   render() {
     const {email, password, error} = this.state;
     return (
-      <div className="contentWrap">
-        <h1>Login to access your account</h1>
+      <div className="login">
         {error && <p className="error-message">{error.message}</p>}
         <form onSubmit={this.handleSubmit}>
-        <div classname="emailwrap">
-          <label className="email-placeholder" htmlFor="email">Your email address:</label>
+          <label htmlFor="chk" aria-hidden="true" id="loginh1">Login</label>
             <input
               type="text"
               name="email"
               id="email"
               className="email-input"
+              placeholder="Email"
+              required=""
               value={email}
               onChange={this.handleChange}>
             </input>
-            <span className="faux-caret">&nbsp;</span>
-          </div>
-          <label htmlFor="password">Enter your password:</label>
             <input
               type="password"
               name="password"
               id="password"
+              placeholder="Password"
+              required=""
               value={password}
               onChange={this.handleChange}>
             </input>
-            <span>&nbsp;</span>
           <button className="submit">Login</button>
-          <p>Don't have an account? <Link className="login-btn" to="/register"><strong>Register</strong> here</Link></p>
         </form>
-      </div>
+        </div>
     );
   }
 }

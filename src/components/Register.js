@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from '../firebase.js';
-import Login from './Login';
+//import Login from './Login';
 
 class Register extends Component {
   constructor(props){
@@ -37,40 +37,40 @@ class Register extends Component {
   render() {
     const {email, username, password, error} = this.state;
     return (
-      <div className="contentWrap">
-        <div className="auth-container">
-          <h1>Register your account</h1>
+        <div className="signup">
           {error && <p className="error-message">{error.message}</p>}
           <form onSubmit={this.handleSubmit}>
-            <label htmlFor="username">Username</label>
+            <label htmlFor="chk" aria-hidden="true" id="signuph1">Sign up</label>
               <input
                 type="text"
                 name="username"
                 id="username"
+                placeholder="Username"
+                required=""
                 value={username}
                 onChange={this.handleChange}>
               </input>
-            <label htmlFor="email">Email address</label>
               <input
                 type="text"
                 name="email"
                 id="email"
+                placeholder="Email"
+                required=""
                 value={email}
                 onChange={this.handleChange}>
               </input>
-            <label htmlFor="password">Choose a password</label>
               <input
                 type="password"
                 name="password"
                 id="password"
+                placeholder="Password"
+                required=""
                 value={password}
                 onChange={this.handleChange}>
               </input>
             <button className="submit">Get started</button>
-            <p>Already have an account? <Link className="login-btn" to="/login"><strong>Login</strong> here</Link></p>
           </form>
         </div>
-      </div>
     );
   }
 }

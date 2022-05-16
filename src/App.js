@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import firebase from './firebase';
 import Chatbox from './components/Chatbox';
+import Login from './components/Login';
+import Register from './components/Register';
 
 class App extends Component {
   constructor(props) {
@@ -31,10 +32,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="contentWrap">
-        <h1>Chat App</h1>
+      <>
         {this.props.user && (
-          <div className="allow-chat">
+          <div className="contentWrap">
             <Chatbox items={this.state.items} />
             <form className="message-form" onSubmit={this.onSubmit}>
             <input
@@ -49,13 +49,14 @@ class App extends Component {
           </div>
         )}
         {!this.props.user && (
-          <div className="disallow-chat">
-            <p>
-              <Link to="/login"><strong>Login</strong><br /></Link>or<br /><Link to="/register"><strong>Register<br /></strong></Link>To start chatting!
-            </p>
-          </div>
+          <div className="contentWrap">
+          <div className="authwrap">
+              <input type="checkbox" id="chk" aria-hidden="true"></input>
+              <Register />
+              <Login />
+          </div></div>
         )}
-      </div>
+      </>
     );
   }
 }

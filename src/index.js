@@ -31,24 +31,16 @@ class AppRouter extends Component {
   render() {
     return (
       <Router>
-        <nav className="main-nav">
-          {!this.state.user &&
-            <div>
-              <Link to="/login">Login</Link>
-              <Link to="/register">Register</Link>
-            </div>
-          }
+        <>
           {this.state.user &&
             <a href="#!" onClick={this.logOutUser}>Log out</a>
           }
-        </nav>
-        <div className="app">
           <Switch>
             <Route path="/" exact render={() => <App user={this.state.user}/>} />
             <Route path="/login" exact component={Login} />
             <Route path="/register" exact component={Register} />
           </Switch>
-        </div>
+        </>
       </Router>
     );
   }
