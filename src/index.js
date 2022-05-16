@@ -6,7 +6,7 @@ import {
   Link,
   BrowserRouter as Router
 } from "react-router-dom";
-import './index.css';
+import './styles.css';
 import firebase, {auth, provider} from './firebase.js';
 import App from './App';
 import Login from './components/Login';

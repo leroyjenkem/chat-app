@@ -13,12 +13,16 @@
     "gulp": "4",
     "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-watch": "^5.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.13",
     "postcss-cli": "^9.1.0",
     "postcss-dark-theme-class": "^0.7.3",
     "postcss-nested": "^5.0.6",
     "postcss-scss": "^4.0.4",
+    "postcss-simple-vars": "^6.0.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router": "5.2.0",
@@ -28,15 +32,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build:css": "postcss src/styles/bundle/bundled.css -o src/index.css",
-    "watch:css": "postcss src/styles/bundle/bundled.css -o src/index.css -w",
-    "start": "npm-run-all -p watch:css start-js gulp",
+    "build:css": "gulp",
+    "watch:css": "gulp watchcss",
+    "start": "npm-run-all -p watch:css start-js",
     "start-js": "react-scripts start",
     "build-js": "react-scripts build",
     "build": "npm-run-all build:css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "gulp": "gulp cssBundle"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
