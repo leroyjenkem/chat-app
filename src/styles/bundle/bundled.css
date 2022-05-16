@@ -164,10 +164,9 @@ button:hover{
 }
 
 .chatbox {
-  max-width: 57.5vw;
+  width: 666px;
   margin: auto;
   display: block;
-  border: 1px solid #ccc;
   border-radius: rfs(.75rem);
   padding-top: rfs(2.5rem);
 	background-color: rgba(29, 32, 44, 0.5)
@@ -179,23 +178,21 @@ button:hover{
 	color: #ccc;
 }
 
+.message-form {
+  display: flex;
+}
+
 #message {
-  width: 47.5vw;
+  width: 75%;
   height: 2rem;
   border: 1px solid #ccc;
   border-radius: rfs(.5rem);
-  -webkit-background-clip: border-box;
   padding: rfs(.5rem 1rem);
   margin: rfs(.5rem .5rem 0 .75rem);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 #send {
-  border: 1px solid #ccc;
+  width: 15%;
   border-radius: rfs(.75rem);
   padding: rfs(.35rem .5rem);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
 }
