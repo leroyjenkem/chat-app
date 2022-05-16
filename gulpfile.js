@@ -6,15 +6,16 @@ let nested = require('postcss-nested');
 let rfs = require('rfs');
 let rename = require('gulp-rename');
 let simplevars = require('postcss-simple-vars');
+let bs = require('browser-sync');
 
 let SORSA = {
   css: [
     './src/styles/main.css',
     './src/styles/auth.css',
-    './src/styles/nav.css',
+    './src/styles/chat.css',
   ],
-  bundled: 'src/styles/bundle/bundled.css'
-}
+  bundled: './src/styles/bundle/bundled.css'
+};
 //gulp.task('bundling',
 const bundling = () => {
   return src(SORSA.css)
@@ -30,8 +31,23 @@ const postcsscomp = () => {
       .pipe(dest('src'));
     };
 
+function reload(done) {
+  bs.reload();
+  done();
+};
+
+//function bundle(done) {
+//  task(bundling);
+//  done();
+//};
+//
+//function postcssrf(done) {
+//  task(postcsscomp);
+//  done();
+//};
+
 task('watchcss', function () {
-watch(SORSA.css, series(bundling, postcsscomp));
+  watch('src/styles/*.css', series(bundling, postcsscomp, reload));
 });
 
 exports.default = series(bundling, postcsscomp);

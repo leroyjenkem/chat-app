@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom/client';
 import {
   Route,
   Switch,
-  Link,
   BrowserRouter as Router
 } from "react-router-dom";
 import './styles.css';
-import firebase, {auth, provider} from './firebase.js';
+import firebase, {auth} from './firebase.js';
 import App from './App';
 import Login from './components/Login';
 import Register from './components/Register';
