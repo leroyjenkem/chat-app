@@ -6,12 +6,19 @@ body {
 	background-color: #1D202C;
 	min-height: 100vh;
 	margin: 0;
-	padding: 0;
+	padding: calc(1.625rem + 4.5vw);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	-ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+@media (min-width: 1200px) {
+
+	body {
+	padding: 5rem;
+	}
 }
 
 body::-webkit-scrollbar {
@@ -72,6 +79,13 @@ body::-webkit-scrollbar {
 			background-position: 0% 50%
 			}
 	  }
+
+#logout {
+	position: absolute;
+	right: 1.25rem;
+	top: 0.1rem;
+	max-width: 5rem;
+}
 
 .authwrap {
 	width: 400px;
@@ -177,41 +191,51 @@ button:hover{
 
 .chatbox {
   width: 666px;
-  margin: auto;
   display: block;
   border-radius: 0.75rem;
-  padding-top: calc(1.375rem + 1.5vw);
+  padding-bottom: 0.1rem;
 	background-color: rgba(29, 32, 44, 0.5)
 }
 
-@media (min-width: 1200px) {
-
-	.chatbox {
-  padding-top: 2.5rem;
-	}
+.chat-list {
+  margin: auto;
+  padding: 1.25rem;
 }
 
 .messages {
   text-align: left;
   list-style: none;
 	color: #ccc;
+  padding: 0.2rem;
+  margin-left: calc(2.025rem + 9.3vw);
+  text-indent:calc(-2.025rem - 9.3vw);
+}
+
+@media (min-width: 1200px) {
+
+	.messages {
+  margin-left: 9rem;
+  text-indent:-9rem;
+	}
 }
 
 .message-form {
   display: flex;
+  height: 5rem;
 }
 
 #message {
   width: 75%;
-  height: 2rem;
+  height: 1.5rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 0.5rem 0 0.75rem;
+  padding: 0.5rem 0.5rem;
+  margin: auto;
 }
 
 #send {
   width: 15%;
   border-radius: 0.75rem;
-  padding: 0.35rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: auto;
 }

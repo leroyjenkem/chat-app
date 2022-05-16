@@ -41,7 +41,7 @@ class Chatbox extends Component {
                     hour: "numeric",
                     minute: "numeric",
                 }).replace(',',' @') + ' ]'}
-                <strong> {chat.user}</strong> said:
+                <strong> {chat.user}</strong>:
                 {' ' + chat.message}
               </li>
             );

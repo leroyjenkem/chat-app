@@ -6,7 +6,7 @@ body {
 	background-color: #1D202C;
 	min-height: 100vh;
 	margin: 0;
-	padding: 0;
+	padding: rfs(5rem);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -53,6 +53,13 @@ body::-webkit-scrollbar {
 			}
 	  }
 	}
+}
+
+#logout {
+	position: absolute;
+	right: rfs(1.25rem);
+	top: rfs(.1rem);
+	max-width: 5rem;
 }
 
 .authwrap {
@@ -146,34 +153,43 @@ button:hover{
 
 .chatbox {
   width: 666px;
-  margin: auto;
   display: block;
   border-radius: rfs(.75rem);
-  padding-top: rfs(2.5rem);
+  padding-bottom: rfs(.1rem);
 	background-color: rgba(29, 32, 44, 0.5)
+}
+
+.chat-list {
+  margin: auto;
+  padding: rfs(1.25rem);
 }
 
 .messages {
   text-align: left;
   list-style: none;
 	color: #ccc;
+  padding: rfs(.2rem);
+  margin-left: rfs(9rem);
+  text-indent:rfs(-9rem);
 }
 
 .message-form {
   display: flex;
+  height: 5rem;
 }
 
 #message {
   width: 75%;
-  height: 2rem;
+  height: 1.5rem;
   border: 1px solid #ccc;
   border-radius: rfs(.5rem);
-  padding: rfs(.5rem 1rem);
-  margin: rfs(.5rem .5rem 0 .75rem);
+  padding: rfs(.5rem .5rem);
+  margin: auto;
 }
 
 #send {
   width: 15%;
   border-radius: rfs(.75rem);
-  padding: rfs(.35rem .5rem);
+  padding: rfs(.5rem .5rem .5rem .5rem);
+  margin: auto;
 }

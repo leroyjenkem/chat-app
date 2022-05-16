@@ -6,7 +6,7 @@ body {
 	background-color: #1D202C;
 	min-height: 100vh;
 	margin: 0;
-	padding: 0;
+	padding: rfs(5rem);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -53,4 +53,11 @@ body::-webkit-scrollbar {
 			}
 	  }
 	}
+}
+
+#logout {
+	position: absolute;
+	right: rfs(1.25rem);
+	top: rfs(.1rem);
+	max-width: 5rem;
 }

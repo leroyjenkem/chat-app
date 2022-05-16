@@ -36,16 +36,6 @@ function reload(done) {
   done();
 };
 
-//function bundle(done) {
-//  task(bundling);
-//  done();
-//};
-//
-//function postcssrf(done) {
-//  task(postcsscomp);
-//  done();
-//};
-
 task('watchcss', function () {
   watch('src/styles/*.css', series(bundling, postcsscomp, reload));
 });

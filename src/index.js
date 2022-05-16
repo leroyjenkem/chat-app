@@ -32,7 +32,7 @@ class AppRouter extends Component {
       <Router>
         <>
           {this.state.user &&
-            <a href="#!" onClick={this.logOutUser}>Log out</a>
+            <a href="#!" onClick={this.logOutUser}><button id="logout">Log out</button></a>
           }
           <Switch>
             <Route path="/" exact render={() => <App user={this.state.user}/>} />
