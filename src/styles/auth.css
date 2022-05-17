@@ -1,6 +1,7 @@
+
 .authwrap {
-	width: 400px;
-	height: 450px;
+	width: 30vw;
+	height: 95vh;
 	overflow: hidden;
 }
 
@@ -68,7 +69,7 @@ button:hover{
 	height: 460px;
 	background: #eee;
 	border-radius: 60% / 10%;
-	transform: translateY(-160px);
+	transform: translateY(-150px);
 	transition: .8s ease-in-out;
 }
 
@@ -78,11 +79,24 @@ button:hover{
 }
 
 #chk:checked ~ .login{
-	transform: translateY(-440px);
+	transform: translateY(-465px);
 }
 #chk:checked ~ .login label{
 	transform: scale(1);
 }
 #chk:checked ~ .signup label{
 	transform: scale(.6);
+}
+
+
+@media (--small-viewport) {
+  .authwrap {
+  	width: 75vw;
+  	height: 60vh;
+  	overflow: hidden;
+  }
+
+  #chk:checked ~ .login{
+  	transform: translateY(-450px);
+  }
 }

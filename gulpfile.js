@@ -7,9 +7,12 @@ let rfs = require('rfs');
 let rename = require('gulp-rename');
 let simplevars = require('postcss-simple-vars');
 let bs = require('browser-sync');
+let  postcssCustomMedia = require('postcss-custom-media');
+let  postcssMinMax = require('postcss-media-minmax');
 
 let SORSA = {
   css: [
+    './src/styles/breakpoints.css',
     './src/styles/main.css',
     './src/styles/auth.css',
     './src/styles/chat.css',
@@ -26,7 +29,14 @@ const bundling = () => {
 //gulp.task('postcss',
 const postcsscomp = () => {
   return src(SORSA.bundled)
-      .pipe(postcss([rfs, nested, autoprefixer, simplevars]))
+      .pipe(postcss([
+                    rfs,
+                    nested,
+                    autoprefixer,
+                    simplevars,
+                    postcssCustomMedia,
+                    postcssMinMax
+                    ]))
       .pipe(rename('styles.css'))
       .pipe(dest('src'));
     };

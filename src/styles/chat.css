@@ -1,5 +1,4 @@
 
-
 .chatbox {
   display: block;
   width: 60vw;
@@ -14,9 +13,23 @@
   scroll-behavior: smooth;
 }
 
+@media (--small-viewport) {
+  display: block;
+  width: 40vw;
+  height: 55vh;
+  border-radius: rfs(.75rem);
+  border: .75rem solid transparent;
+  padding: rfs(.1rem);
+  background-color: rgba(29, 32, 44, 0.5);
+  overflow:auto;
+  overflow-y: scroll;
+  direction: ltr;
+  scroll-behavior: smooth;
+}
+
 .chat-list {
-  margin: auto;
-  padding: rfs(1.25rem);
+
+  padding: rfs(0 1.25rem);
 }
 
 .chatbox::-webkit-scrollbar {
@@ -69,7 +82,7 @@
   text-align: left;
   list-style: none;
 	color: #ccc;
-  padding: rfs(.2rem);
+  padding-top: rfs(.25rem);
 }
 
 .message-form {
