@@ -10,8 +10,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	-ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+
 }
 
 body::-webkit-scrollbar {
@@ -151,12 +150,19 @@ button:hover{
 	transform: scale(.6);
 }
 
+
+
 .chatbox {
-  width: 666px;
   display: block;
   border-radius: rfs(.75rem);
-  padding-bottom: rfs(.1rem);
-	background-color: rgba(29, 32, 44, 0.5)
+  border: .75rem solid transparent;
+  padding: rfs(.1rem);
+  margin-top: 5rem;
+	background-color: rgba(29, 32, 44, 0.5);
+  overflow:auto;
+  overflow-y: scroll;
+  direction: ltr;
+  scroll-behavior: smooth;
 }
 
 .chat-list {
@@ -164,13 +170,57 @@ button:hover{
   padding: rfs(1.25rem);
 }
 
+.chatbox::-webkit-scrollbar {
+  width: 1.1rem;
+}
+
+.chatbox::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 .12rem .12rem rgba(255, 255, 255, 0.25);
+  border-radius: 100px;
+  backdrop-filter: blur(85%);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f57abc 0%, #708AD4 99%);
+    border: rfs(.3rem) solid transparent;
+    box-shadow: inset 2px 2px 2px 0 rgba(255, 255, 255, 0.55);
+    border-radius: 100px;
+    background-clip: content-box;
+    animation: animateGlow 5s ease infinite;
+}
+
+.chatbox::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #0fffc1, #7e0fff);
+    box-shadow: inset 2px 2px 5px 0 rgba(255, 255, 255, 0.55);
+    background-size: 200% 200%;
+    border: rfs(.3rem) solid transparent;
+    border-radius: 100px;
+    background-clip: content-box;
+    animation: animateGlow 5s ease infinite;
+}
+
+@keyframes animateGlow {
+ 0%  {
+ background-position: 0% 50%
+}
+
+50% {
+ background-position: 100% 50%
+}
+
+ 100% {
+ background-position: 0% 50%
+ }
+}
+
 .messages {
   text-align: left;
   list-style: none;
 	color: #ccc;
   padding: rfs(.2rem);
-  margin-left: rfs(9rem);
-  text-indent:rfs(-9rem);
 }
 
 .message-form {

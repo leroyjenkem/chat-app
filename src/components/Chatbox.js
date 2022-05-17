@@ -23,7 +23,7 @@ class Chatbox extends Component {
           });
         }
       }
-      const chats = ascChats.reverse();
+      const chats = ascChats;
       this.setState({chats});
     });
   }
@@ -35,14 +35,18 @@ class Chatbox extends Component {
             const postDate = new Date(chat.date);
             return(
               <li key={chat.id} className="messages">
-                {'[ ' + postDate.toLocaleString('en-US', {
+                <strong> {chat.user} </strong>
+                <small><em>
+                {' ' + postDate.toLocaleString('en-US', {
+                    year: "numeric",
                     month: "numeric",
                     day: "numeric",
                     hour: "numeric",
                     minute: "numeric",
-                }).replace(',',' @') + ' ]'}
-                <strong> {chat.user}</strong>:
-                {' ' + chat.message}
+                }).replace(',',' @')}
+                </em></small>
+                <br />
+                {chat.message}
               </li>
             );
           })}

@@ -10,6 +10,8 @@ import firebase, {auth} from './firebase.js';
 import App from './App';
 import Login from './components/Login';
 import Register from './components/Register';
+import {$,jQuery} from './util/jquery-ui.min.css';
+
 
 class AppRouter extends Component {
   constructor(props) {
