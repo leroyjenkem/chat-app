@@ -35,18 +35,22 @@ class Chatbox extends Component {
             const postDate = new Date(chat.date);
             return(
               <li key={chat.id} className="messages">
-                <strong> {chat.user} </strong>
-                <small><em>
-                {' ' + postDate.toLocaleString('en-US', {
-                    year: "numeric",
-                    month: "numeric",
-                    day: "numeric",
-                    hour: "numeric",
-                    minute: "numeric",
-                }).replace(',',' @')}
-                </em></small>
+                <span className="msgusername">
+                  {chat.user + ' '}
+                </span>
+                <span className="msgdate">
+                  {' ( ' + postDate.toLocaleString('en-US', {
+                      year: "numeric",
+                      month: "numeric",
+                      day: "numeric",
+                      hour: "numeric",
+                      minute: "numeric",
+                    }).replace(',','﹫') + ' )'}
+                </span>
                 <br />
-                {chat.message}
+                <span className="actualmsg">
+                  {chat.message}
+                </span>
               </li>
             );
           })}

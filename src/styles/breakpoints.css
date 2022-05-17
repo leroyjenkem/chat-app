@@ -1,3 +1,0 @@
-@custom-media --small-viewport (max-width: 699px);
-@custom-media --reg-viewport (screen and (min-width: 700px and max-width: 1199px));
-@custom-media --lrg-viewport (min-width: 1200);

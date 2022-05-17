@@ -12,7 +12,8 @@ let  postcssMinMax = require('postcss-media-minmax');
 
 let SORSA = {
   css: [
-    './src/styles/breakpoints.css',
+    './src/styles/utils/fonts.css',
+    './src/styles/utils/breakpoints.css',
     './src/styles/main.css',
     './src/styles/auth.css',
     './src/styles/chat.css',
