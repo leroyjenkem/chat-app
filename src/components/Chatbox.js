@@ -45,7 +45,7 @@ class Chatbox extends Component {
                       day: "numeric",
                       hour: "numeric",
                       minute: "numeric",
-                    }).replace(',','﹫') + ' )'}
+                    }).replace(',',' ﹫') + ' )'}
                 </span>
                 <br />
                 <span className="actualmsg">
