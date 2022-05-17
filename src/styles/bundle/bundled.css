@@ -154,10 +154,11 @@ button:hover{
 
 .chatbox {
   display: block;
+  width: 60vw;
+  height: 60vh;
   border-radius: rfs(.75rem);
   border: .75rem solid transparent;
   padding: rfs(.1rem);
-  margin-top: 5rem;
 	background-color: rgba(29, 32, 44, 0.5);
   overflow:auto;
   overflow-y: scroll;
@@ -192,7 +193,7 @@ button:hover{
     animation: animateGlow 5s ease infinite;
 }
 
-.chatbox::-webkit-scrollbar-thumb:hover {
+/*.chatbox::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #0fffc1, #7e0fff);
     box-shadow: inset 2px 2px 5px 0 rgba(255, 255, 255, 0.55);
     background-size: 200% 200%;
@@ -200,7 +201,7 @@ button:hover{
     border-radius: 100px;
     background-clip: content-box;
     animation: animateGlow 5s ease infinite;
-}
+}*/
 
 @keyframes animateGlow {
  0%  {
