@@ -1,5 +1,6 @@
 .chatbox {
-  display: block;
+  display: flex;
+  flex-direction: column-reverse;
   border-radius: rfs(.75rem);
   border: .75rem solid transparent;
   padding: rfs(.1rem);
@@ -74,7 +75,7 @@
          font-weight: normal;
          color: #ccc;
          font-size: rfs(.915rem);
-         padding-bottom: rfs(1.5rem);
+         padding-bottom: rfs(1.25rem);
          transition: color .25s ease;
          transition-delay: .15s;
          &:hover{
