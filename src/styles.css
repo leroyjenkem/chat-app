@@ -13,10 +13,6 @@
             font-display: swap;
             }
 
-html, body {
-
-}
-
 body {
 	background-color: #1D202C;
 	min-height: 100vh;
@@ -27,14 +23,14 @@ body {
 	align-items: center;
 }
 
+body::-webkit-scrollbar {
+	  display: none;
+	}
+
 @media (min-width: 1200px) {
 body {
 	padding: 5rem;
 }
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 
 .contentWrap {
@@ -68,11 +64,9 @@ body::-webkit-scrollbar {
 	    0%  {
 			background-position: 0% 50%
 		}
-
 		50% {
 			background-position: 100% 50%
 		}
-
 	    100% {
 			background-position: 0% 50%
 			}
@@ -82,117 +76,113 @@ body::-webkit-scrollbar {
 	    0%  {
 			background-position: 0% 50%
 		}
-
 		50% {
 			background-position: 100% 50%
 		}
-
 	    100% {
 			background-position: 0% 50%
 			}
 	  }
 
-#logout {
-	position: absolute;
-	right: 1.25rem;
-	top: 0.1rem;
-	max-width: 5rem;
+.authwrap{
+  overflow: hidden;
 }
 
-.signup{
-	position: relative;
-	width:100%;
-	height: 100%;
-}
+.authwrap .signup{
+  	position: relative;
+  	width:100%;
+  	height: 100%;
+  }
 
-.login label{
-	color: #573b8a;
-	-webkit-transform: scale(.6);
-	        transform: scale(.6);
-}
+.authwrap .login {
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transition: .8s ease-in-out;
+  }
 
-#loginh1 {
-  padding-top: 1rem;
-}
+.authwrap .login label {
+    	color: #573b8a;
+    	-webkit-transform: scale(.6);
+    	        transform: scale(.6);
+      padding-top: 1rem;
+    }
 
-#chk{
-	display: none;
-}
-#chk:checked ~ .login label{
-	-webkit-transform: scale(1);
-	        transform: scale(1);
-}
-#chk:checked ~ .signup label{
-	-webkit-transform: scale(.6);
-	        transform: scale(.6);
-}
+.authwrap #chk{
+  	display: none;
+  }
 
-label{
-	color: #fff;
-	font-size: calc(1.355rem + 1.26vw);
-	justify-content: center;
-	display: flex;
-	margin: calc(1.405rem + 1.86vw);
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
+.authwrap #chk:checked ~ .login label{
+    	-webkit-transform: scale(1);
+    	        transform: scale(1);
+    }
+
+.authwrap #chk:checked ~ .signup label{
+    	-webkit-transform: scale(.6);
+    	        transform: scale(.6);
+    }
+
+.authwrap label{
+  	color: #fff;
+  	font-size: calc(1.355rem + 1.26vw);
+  	justify-content: center;
+  	display: flex;
+  	margin: calc(1.405rem + 1.86vw);
+  	font-weight: bold;
+  	cursor: pointer;
+  	transition: .5s ease-in-out;
+  }
+
+.authwrap input{
+  	width: 60%;
+  	height: 1.2rem;
+  	background: #e0dede;
+  	justify-content: center;
+  	display: flex;
+  	margin: 1.25rem auto;
+  	padding: 0.6rem;
+  	border: none;
+  	outline: none;
+  	border-radius: 0.33rem;
+  }
 
 @media (min-width: 1200px) {
-label {
-	font-size: 2.3rem;
-	margin: 2.8rem;
+.authwrap {
+  	font-size: 2.3rem;
+  	margin: 2.8rem;
 }
-}
-
-input{
-	width: 60%;
-	height: 20px;
-	background: #e0dede;
-	justify-content: center;
-	display: flex;
-	margin: 1.25rem auto;
-	padding: 0.6rem;
-	border: none;
-	outline: none;
-	border-radius: 0.33rem;
 }
 
 button{
-	width: 60%;
-	height: 40px;
-	margin: 0.6rem auto;
-	justify-content: center;
-	display: block;
-	color: #fff;
-	background: #573b8a;
-	font-size: 1rem;
-	font-weight: bold;
-	margin-top: 1.25rem;
-	outline: none;
-	border: none;
-	border-radius: 0.33rem;
-	transition: .2s ease-in;
-	cursor: pointer;
+  width: 60%;
+  height: 40px;
+  margin: 0.6rem auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #573b8a;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1.25rem;
+  outline: none;
+  border: none;
+  border-radius: 0.33rem;
+  transition: .2s ease-in;
+  cursor: pointer;
 }
 
 button:hover{
-	background: #6d44b8;
-}
+    background: #6d44b8;
+  }
 
 @media (max-width: 499px) {
   .authwrap {
   	width: 75vw;
   	height: 57.5vh;
-  	overflow: hidden;
   }
   .login {
-	  height: 460px;
-	  background: #eee;
-	  border-radius: 60% / 10%;
 	  -webkit-transform: translateY(-130px);
 	          transform: translateY(-130px);
-	  transition: .8s ease-in-out;
   }
   #chk:checked ~ .login{
   	-webkit-transform: translateY(-420px);
@@ -204,15 +194,10 @@ button:hover{
   .authwrap {
   	width: 60vw;
   	height: 62vh;
-  	overflow: hidden;
   }
   .login {
-	  height: 460px;
-	  background: #eee;
-	  border-radius: 60% / 10%;
 	  -webkit-transform: translateY(-140px);
 	          transform: translateY(-140px);
-	  transition: .8s ease-in-out;
   }
   #chk:checked ~ .login{
   	-webkit-transform: translateY(-450px);
@@ -223,20 +208,15 @@ button:hover{
 @media (min-width: 720px) {
   .authwrap {
 	  width: 43vw;
-	  height: 66.3vh;
-	  overflow: hidden;
+	  height: 95vh;
   }
   .login {
-	  height: 460px;
-	  background: #eee;
-	  border-radius: 60% / 10%;
 	  -webkit-transform: translateY(-160px);
 	          transform: translateY(-160px);
-	  transition: .8s ease-in-out;
   }
   #chk:checked ~ .login{
-	   -webkit-transform: translateY(-475px);
-	           transform: translateY(-475px);
+	   -webkit-transform: translateY(-455px);
+	           transform: translateY(-455px);
    }
 }
 
@@ -244,15 +224,10 @@ button:hover{
   .authwrap {
 	  width: 37.5vw;
 	  height: 72.5vh;
-	  overflow: hidden;
   }
   .login {
-	  height: 460px;
-	  background: #eee;
-	  border-radius: 60% / 10%;
 	  -webkit-transform: translateY(-170px);
 	          transform: translateY(-170px);
-	  transition: .8s ease-in-out;
   }
   #chk:checked ~ .login{
 	   -webkit-transform: translateY(-515px);
@@ -260,26 +235,21 @@ button:hover{
    }
 }
 
-
 .chatbox {
   display: block;
-  width: 60vw;
-  height: 60vh;
   border-radius: 0.75rem;
   border: .75rem solid transparent;
   padding: 0.1rem;
-	background-color: rgba(29, 32, 44, 0.5);
+  background-color: rgba(29, 32, 44, 0.5);
   overflow:auto;
   overflow-y: scroll;
   direction: ltr;
   scroll-behavior: smooth;
-}
-
+ }
 
 .chatbox::-webkit-scrollbar {
     width: 1.1rem;
   }
-
 
 .chatbox::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.2);
@@ -290,15 +260,13 @@ button:hover{
     border: 1px solid rgba(255, 255, 255, 0.4);
   }
 
-
 .chatbox::-webkit-scrollbar-thumb {
       background: linear-gradient(180deg, #f57abc 0%, #708AD4 99%);
       border: 0.3rem solid transparent;
       box-shadow: inset 2px 2px 2px 0 rgba(255, 255, 255, 0.55);
       border-radius: 100px;
       background-clip: content-box;
-  }
-
+   }
 
 .chatbox::-webkit-scrollbar-thumb:hover {
         background: linear-gradient(180deg, #f57abc 0%, #708AD4 99%);
@@ -308,53 +276,70 @@ button:hover{
         background-clip: content-box;
         -webkit-animation: animateGlow 5s ease infinite;
                 animation: animateGlow 5s ease infinite;
-    }
-
+     }
 
 @keyframes animateGlow {
          0%  {
          background-position: 0% 50%
         }
-
         50% {
          background-position: 100% 50%
         }
-
          100% {
          background-position: 0% 50%
          }
        }
 
-.chat-list {
-  padding: 0 1.25rem;
+.chatbox .chat-list {
+     padding: 0 1.25rem;
+   }
+
+.chatbox .chat-list .messages {
+       text-align: left;
+       list-style: none;
+       padding-top: 0.25rem;
+     }
+
+.chatbox .chat-list .messages .msgusername {
+         font-family: 'Quicksand', sans-serif;
+         font-weight: bold;
+         font-size: 1.1rem;
+         color: #eee;
+       }
+
+.chatbox .chat-list .messages .msgdate {
+         font-family: 'Times Newer Roman';
+         font-size: 0.69rem;
+         font-style: oblique 10deg;
+         color: darkgrey;
+         padding: 1rem 0;
+         transition: font-size .5s ease;
+         transition-delay: .25s;
+       }
+
+.chatbox .chat-list .messages .msgdate:hover{
+           font-size: 0.8rem;
+         }
+
+.chatbox .chat-list .messages .actualmsg {
+         font-family: 'Open Sans', sans-serif;
+         font-weight: normal;
+         color: #ccc;
+         font-size: 0.915rem;
+         padding-bottom: calc(1.275rem + 0.3vw);
+         transition: color .25s ease;
+         transition-delay: .15s;
+       }
+
+.chatbox .chat-list .messages .actualmsg:hover{
+           color: #e0dede;
+         }
+
+@media (min-width: 1200px) {
+.chatbox {
+         padding-bottom: 1.5rem;
 }
-
-.chat-list .messages {
-    text-align: left;
-    list-style: none;
-    padding-top: 0.25rem;
-  }
-
-.chat-list .messages .msgusername {
-      font-family: 'Quicksand', sans-serif;
-      font-weight: bold;
-      font-size: 1.1rem;
-      color: #eee;
-    }
-
-.chat-list .messages .msgdate {
-      font-family: 'Times Newer Roman';
-      font-size: 0.69rem;
-      font-style: oblique 10deg;
-      color: darkgrey;
-    }
-
-.chat-list .messages .actualmsg {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: normal;
-      color: #e0dede;
-      font-size: 0.925rem;
-    }
+}
 
 .message-form {
   display: flex;
@@ -377,21 +362,37 @@ button:hover{
     margin: auto;
   }
 
+#logout {
+	position: absolute;
+	right: 1.25rem;
+	top: 0.1rem;
+	max-width: 5rem;
+}
 
-
-
-
+@media (max-width: 499px) {
+  .chatbox {
+    width: 85vw;
+    height: 75vh;
+  }
+}
 
 @media (min-width: 500px) {
-  display: block;
-  width: 40vw;
-  height: 55vh;
-  border-radius: rfs(.75rem);
-  border: .75rem solid transparent;
-  padding: rfs(.1rem);
-  background-color: rgba(29, 32, 44, 0.5);
-  overflow:auto;
-  overflow-y: scroll;
-  direction: ltr;
-  scroll-behavior: smooth;
+  .chatbox {
+    width: 80vw;
+    height: 70vh;
+  }
+}
+
+@media (min-width: 720px) {
+  .chatbox {
+    width: 69vw;
+    height: 60vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .chatbox {
+    width: 63vw;
+    height: 57.5vh;
+  }
 }
