@@ -7,6 +7,7 @@ import {
 import firebase, {auth} from '../firebase.js';
 import App from '../App';
 import SimplePlane from "./SimplePlane";
+
 import Login from './Login';
 import Register from './Register';
 
@@ -30,6 +31,7 @@ class AppRouter extends Component {
     return (
       <Router>
         <div className="App">
+
           <SimplePlane />
           {this.state.user &&
             <a href="#!" onClick={this.logOutUser}>

@@ -3,6 +3,7 @@ import { Plane, useCurtains } from "react-curtains";
 import { Vec2 } from "curtainsjs";
 import { vertexShader, fragmentShader } from "../util/shaders/shaders";
 import Background from "../assets/bganimation.mp4"
+import Fluids from "./Fluids";
 
 function SimplePlane() {
   const [plane, setPlane] = useState(null);
@@ -154,7 +155,7 @@ function SimplePlane() {
       <video
         src={Background}
         data-sampler="simplePlaneTexture"
-      />
+      /><Fluids />
     </Plane>
   );
 }
