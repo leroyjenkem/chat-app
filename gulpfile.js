@@ -15,6 +15,7 @@ let SORSA = {
     './src/styles/utils/fonts.css',
     './src/styles/utils/breakpoints.css',
     './src/styles/main.css',
+    './src/styles/planes.css',
     './src/styles/auth.css',
     './src/styles/chat.css',
   ],

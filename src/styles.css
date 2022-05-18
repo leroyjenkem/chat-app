@@ -17,7 +17,6 @@ body {
 	background-color: #1D202C;
 	min-height: 100vh;
 	margin: 0;
-	padding: calc(1.625rem + 4.5vw);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -27,10 +26,14 @@ body::-webkit-scrollbar {
 	  display: none;
 	}
 
-@media (min-width: 1200px) {
-body {
-	padding: 5rem;
-}
+.curtains-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  pointer-events: none;
 }
 
 .contentWrap {
@@ -83,6 +86,18 @@ body {
 			background-position: 0% 50%
 			}
 	  }
+
+.video-plane {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  bottom: 5%;
+  left: 5%;
+}
+
+.video-plane video {
+    display: none;
+}
 
 .authwrap{
   overflow: hidden;
@@ -364,19 +379,19 @@ button:hover{
 	max-width: 5rem;
 }
 
-@media (max-width: 499px) {
+/*@media (--tiny-viewport) {
   .chatbox {
     width: 85vw;
     height: 75vh;
   }
 }
 
-@media (min-width: 500px) {
+@media (--small-viewport) {
   .chatbox {
     width: 80vw;
     height: 70vh;
   }
-}
+}*/
 
 @media (min-width: 720px) {
   .chatbox {
@@ -385,9 +400,9 @@ button:hover{
   }
 }
 
-@media (min-width: 1200px) {
+/*@media (--lrg-viewport) {
   .chatbox {
     width: 63vw;
     height: 57.5vh;
   }
-}
+}*/

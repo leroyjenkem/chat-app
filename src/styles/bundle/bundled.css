@@ -22,13 +22,22 @@ body {
 	background-color: #1D202C;
 	min-height: 100vh;
 	margin: 0;
-	padding: rfs(5rem);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	&::-webkit-scrollbar {
 	  display: none;
 	}
+}
+
+.curtains-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  pointer-events: none;
 }
 
 .contentWrap {
@@ -63,6 +72,18 @@ body {
 			}
 	  }
 	}
+}
+
+.video-plane {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  bottom: 5%;
+  left: 5%;
+}
+
+.video-plane video {
+    display: none;
 }
 
 .authwrap{
@@ -303,7 +324,7 @@ button{
 	max-width: 5rem;
 }
 
-@media (--tiny-viewport) {
+/*@media (--tiny-viewport) {
   .chatbox {
     width: 85vw;
     height: 75vh;
@@ -315,7 +336,7 @@ button{
     width: 80vw;
     height: 70vh;
   }
-}
+}*/
 
 @media (--reg-viewport) {
   .chatbox {
@@ -324,9 +345,9 @@ button{
   }
 }
 
-@media (--lrg-viewport) {
+/*@media (--lrg-viewport) {
   .chatbox {
     width: 63vw;
     height: 57.5vh;
   }
-}
+}*/

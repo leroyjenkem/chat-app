@@ -112,7 +112,7 @@
 	max-width: 5rem;
 }
 
-@media (--tiny-viewport) {
+/*@media (--tiny-viewport) {
   .chatbox {
     width: 85vw;
     height: 75vh;
@@ -124,7 +124,7 @@
     width: 80vw;
     height: 70vh;
   }
-}
+}*/
 
 @media (--reg-viewport) {
   .chatbox {
@@ -133,9 +133,9 @@
   }
 }
 
-@media (--lrg-viewport) {
+/*@media (--lrg-viewport) {
   .chatbox {
     width: 63vw;
     height: 57.5vh;
   }
-}
+}*/

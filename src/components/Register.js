@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import firebase from '../firebase.js';
-//import Login from './Login';
 
 class Register extends Component {
   constructor(props){
@@ -63,6 +62,7 @@ class Register extends Component {
                 name="password"
                 id="password"
                 placeholder="Password"
+                autoComplete="off"
                 required=""
                 value={password}
                 onChange={this.handleChange}>

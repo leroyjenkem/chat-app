@@ -35,9 +35,10 @@ class Login extends Component {
             <input
               type="text"
               name="email"
-              id="email"
+              id="current-email"
               className="email-input"
               placeholder="Email"
+              autoComplete="current-email"
               required=""
               value={email}
               onChange={this.handleChange}>
@@ -45,9 +46,10 @@ class Login extends Component {
             <input
               type="password"
               name="password"
-              id="password"
+              id="current-password"
               placeholder="Password"
               required=""
+              autoComplete="current-password"
               value={password}
               onChange={this.handleChange}>
             </input>
