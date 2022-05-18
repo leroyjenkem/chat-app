@@ -7,7 +7,7 @@ import './styles.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Curtains pixelRatio={Math.min(1.5, window.devicePixelRatio)}>
+    <Curtains pixelRatio={Math.min(1.55, window.devicePixelRatio)}>
       <AppRouter />
     </Curtains>
   </React.StrictMode>
