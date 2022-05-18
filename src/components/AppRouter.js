@@ -9,7 +9,6 @@ import App from '../App';
 import SimplePlane from "./SimplePlane";
 import Login from './Login';
 import Register from './Register';
-//import {$,jQuery} from '../util/jquery-ui.min.css';
 
 class AppRouter extends Component {
   constructor(props) {
