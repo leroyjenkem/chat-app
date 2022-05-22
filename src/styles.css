@@ -41,9 +41,7 @@ body::-webkit-scrollbar {
 	background-color: rgba(21, 24, 35, 0.7);
 	box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.3);
 	border-radius: 0.75rem;
-}
-
-.contentWrap:after {
+	/*&:after {
 	  position: absolute;
 	  content: '';
 	  top: 0;
@@ -53,17 +51,12 @@ body::-webkit-scrollbar {
 	  height: 100%;
 	  width: 100%;
 	  margin: auto;
-	  -webkit-filter: blur(2rem);
-	          filter: blur(2rem);
-		-webkit-transform: scale(1.075);
-		        transform: scale(1.075);
+	  filter: blur(2rem);
+		transform: scale(1.005);
 	  background: linear-gradient(90deg, #0fffc1, #7e0fff);
 	  background-size: 200% 200%;
-	  -webkit-animation: animateGlow 10s ease infinite;
-	          animation: animateGlow 10s ease infinite;
-	}
-
-@-webkit-keyframes animateGlow {
+	  animation: animateGlow 10s ease infinite;
+	  @keyframes animateGlow {
 	    0%  {
 			background-position: 0% 50%
 		}
@@ -74,18 +67,8 @@ body::-webkit-scrollbar {
 			background-position: 0% 50%
 			}
 	  }
-
-@keyframes animateGlow {
-	    0%  {
-			background-position: 0% 50%
-		}
-		50% {
-			background-position: 100% 50%
-		}
-	    100% {
-			background-position: 0% 50%
-			}
-	  }
+	}*/
+}
 
 .video-plane {
   position: absolute;
@@ -293,6 +276,18 @@ button:hover{
         -webkit-animation: animateGlow 5s ease infinite;
                 animation: animateGlow 5s ease infinite;
      }
+
+@-webkit-keyframes animateGlow {
+         0%  {
+         background-position: 0% 50%
+        }
+        50% {
+         background-position: 100% 50%
+        }
+         100% {
+         background-position: 0% 50%
+         }
+       }
 
 @keyframes animateGlow {
          0%  {

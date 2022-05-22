@@ -30,7 +30,7 @@ class AppRouter extends Component {
     return (
       <Router>
         <div className="App">
-          <SimplePlane />
+        <SimplePlane />
           {this.state.user &&
             <a href="#!" onClick={this.logOutUser}>
               <button id="logout">Log out</button>

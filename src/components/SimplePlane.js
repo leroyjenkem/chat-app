@@ -2,7 +2,8 @@ import React, { useRef, useState } from "react";
 import { Plane, useCurtains } from "react-curtains";
 import { Vec2 } from "curtainsjs";
 import { vertexShader, fragmentShader } from "../util/shaders/shaders";
-import Background from "../assets/bganimation.mp4"
+import ShaderPlane from "../assets/animations/ShaderPlane";
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 
 function SimplePlane() {
   const [plane, setPlane] = useState(null);
@@ -151,10 +152,9 @@ function SimplePlane() {
       onRender={onRender}
       onAfterResize={onAfterResize}
     >
-      <video
-        src={Background}
-        data-sampler="simplePlaneTexture"
-      />
+    <Canvas>
+    <ShaderPlane />
+    </Canvas>
     </Plane>
   );
 }
